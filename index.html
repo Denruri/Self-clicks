@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Paid for Surveys</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Get Paid for Surveys!</h1>
+    <p>Take a short survey to unlock our exclusive guide on how to make money from online surveys — perfect for beginners.</p>
+    <a id="cta-button" class="cta-button">✅ Start Now & Unlock Guide</a>
+    <p class="small-text">Safe & private • Takes just 1 minute</p>
+    <footer style="margin-top:20px; font-size: 12px; text-align: center;">
+      <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+    </footer>
+  </div>
+  <script>
+    // Inject CPA link from environment variable
+    document.getElementById("cta-button").setAttribute("href", 
+      (typeof process !== "undefined" && process.env.NEXT_PUBLIC_CPA_LINK) 
+      ? process.env.NEXT_PUBLIC_CPA_LINK 
+      : "https://your-cpa-offer-link.com");
+  </script>
+</body>
+</html>
