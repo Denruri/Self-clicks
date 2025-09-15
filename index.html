@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Paid for Surveys</title>
   <link rel="stylesheet" href="assets/style.css">
+
+  <!-- 🔵 Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '666668482581407'); // 🔴 Replace with your real Pixel ID
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=666668482581407&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- 🟢 Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQSF2CFFTM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FQSF2CFFTM'); // 🔴 Replace with your GA4 Measurement ID
+  </script>
 </head>
 <body>
   <div class="container">
@@ -13,15 +40,20 @@
     <a id="cta-button" class="cta-button">✅ Start Now & Unlock Guide</a>
     <p class="small-text">Safe & private • Takes just 1 minute</p>
     <footer style="margin-top:20px; font-size: 12px; text-align: center;">
-      <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy-policy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms & Conditions</a>
     </footer>
   </div>
+
   <script>
-    // Inject CPA link from environment variable
-    document.getElementById("cta-button").setAttribute("href", 
-      (typeof process !== "undefined" && process.env.NEXT_PUBLIC_CPA_LINK) 
-      ? process.env.NEXT_PUBLIC_CPA_LINK 
-      : "https://your-cpa-offer-link.com");
+    // Set CPA link (replace with your actual offer)
+    document.getElementById("cta-button").setAttribute("href", "https://www.directcpi.com/view.php?id=5541963&pub=3296935");
+
+    // Track CTA button click
+    document.getElementById("cta-button").addEventListener("click", function() {
+      fbq('track', 'Lead');  // Facebook conversion event
+      gtag('event', 'conversion', { 'send_to': 'G-FQSF2CFFTM' }); // GA4 conversion event
+    });
   </script>
 </body>
 </html>
